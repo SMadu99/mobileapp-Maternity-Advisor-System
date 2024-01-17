@@ -8,14 +8,14 @@ import {
   Touchable,
 } from 'react-native';
 import React from 'react';
-import { Icon } from '@rneui/themed';
+import {Icon} from '@rneui/themed';
 
-function UserVerifyField(p:any) {
-const stack = p.stack;
+function UserVerifyField(p: any) {
+  const stack = p.stack;
 
-function goNewPassword(){
-  stack.navigate('changepassword');
-}
+  function goNewPassword() {
+    stack.navigate('changepassword');
+  }
 
   return (
     <View style={{flex: 1, position: 'absolute'}}>
@@ -24,12 +24,13 @@ function goNewPassword(){
           backgroundColor: 'rgba(214, 182, 197, 0.70)',
           //height: '50%',
           borderRadius: 30,
-          marginHorizontal: 28,
+          marginHorizontal: 30,
           marginTop: 140,
           position: 'absolute',
-
+          maxWidth:500,
           marginBottom: 0,
           flex: 1,
+          
         }}>
         <Text
           style={{
@@ -39,6 +40,7 @@ function goNewPassword(){
             fontWeight: '700',
             color: '#000',
             marginBottom: 10,
+            
           }}>
           New Password
         </Text>
@@ -49,11 +51,14 @@ function goNewPassword(){
             flex: 1.3,
             flexDirection: 'row',
           }}>
-          <View style={{flex: 1, }}>
-            <Icon name={'person'} type={'ionicon'} style={{
-              marginTop:20
-            }}/>
-
+          <View style={{flex: 1}}>
+            <Icon
+              name={'person'}
+              type={'ionicon'}
+              style={{
+                marginTop: 20,
+              }}
+            />
           </View>
 
           <View
@@ -66,7 +71,8 @@ function goNewPassword(){
               marginTop: 10,
               marginBottom: 20,
               borderRadius: 40,
-              paddingHorizontal: 10,
+              paddingHorizontal: 20,
+              maxWidth:300
             }}>
             <TextInput placeholder="Username" />
           </View>
@@ -78,8 +84,8 @@ function goNewPassword(){
             width: '90%',
             height: 30,
             marginLeft: 20,
-            borderTopLeftRadius:20,
-            borderTopRightRadius:20,
+            borderTopLeftRadius: 20,
+            borderTopRightRadius: 20,
             paddingHorizontal: 10,
           }}>
           <Text
@@ -124,7 +130,6 @@ function goNewPassword(){
               <View
                 style={{
                   flex: 1,
-                  
                 }}>
                 <Text
                   style={{
@@ -142,7 +147,7 @@ function goNewPassword(){
                   backgroundColor: '#fff',
                   borderRadius: 40,
                   paddingLeft: 10,
-                  marginBottom:5
+                  marginBottom: 5,
                 }}>
                 <TextInput placeholder="OTP Code" />
               </View>
@@ -150,42 +155,39 @@ function goNewPassword(){
             <View
               style={{
                 flex: 0.5,
-                
               }}>
               <View
                 style={{
                   flex: 1,
-                  
                 }}></View>
-                
-                <View style={{
-                  backgroundColor:'#2F4858',
-                  flex:1.2,
-                  borderRadius:40,
-                  justifyContent:'center',
-                  marginBottom:10,
-                  marginLeft:10
-                  
-                  
+
+              <View
+                style={{
+                  backgroundColor: '#2F4858',
+                  flex: 1.2,
+                  borderRadius: 40,
+                  justifyContent: 'center',
+                  marginBottom: 10,
+                  marginLeft: 10,
                 }}>
-                  <TouchableOpacity>
-                  <Text style={{
-                    paddingLeft:40,
-                    fontSize:18,
-                    color:'#fff',
-                  
-                  }}>
+                <TouchableOpacity>
+                  <Text
+                    style={{
+                      paddingLeft: 40,
+                      fontSize: 18,
+                      color: '#fff',
+                    }}>
                     Request OTP
                   </Text>
-                  </TouchableOpacity>
-                </View>
-                
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
         </View>
 
         <View style={{flex: 1, marginBottom: 20}}>
-          <TouchableOpacity onPress={goNewPassword}
+          <TouchableOpacity
+            onPress={goNewPassword}
             style={{
               width: 250,
               backgroundColor: '#2F4858',
@@ -215,7 +217,7 @@ function goNewPassword(){
   );
 }
 
-const UserVerify = (props:any) => {
+const UserVerify = (props: any) => {
   const stack = props.navigation;
   return (
     <View style={{flex: 1}}>
@@ -228,7 +230,7 @@ const UserVerify = (props:any) => {
         }}
         source={require('../assests/images/login.png')}
       />
-      <UserVerifyField stack={stack}/>
+      <UserVerifyField stack={stack} />
     </View>
   );
 };

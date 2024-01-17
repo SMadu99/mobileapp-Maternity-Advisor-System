@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const MidWifeHome = () => {
+const Main = () => {
   return (
     <View>
-      <Text>MidWifeHome</Text>
+      <Text>Main</Text>
     </View>
   )
 }
 
-export default MidWifeHome
+export default Main

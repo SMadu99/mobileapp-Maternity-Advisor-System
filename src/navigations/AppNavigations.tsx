@@ -1,5 +1,4 @@
-import {View, Text} from 'react-native';
-import React from 'react';
+//import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
 import {
   CardStyleInterpolators,
@@ -9,12 +8,17 @@ import LoadPage from '../screen/LoadPage';
 import LoginPage from '../screen/LoginPage';
 import ChangePassword from '../screen/ChangePassword';
 import UserVerify from '../screen/UserVerify';
-import MidWifeHome from '../screen/MidWifeHome';
+import MidWifeHome from '../screen/Midwife/MidWifeHome';
+import {createDrawerNavigator} from '@react-navigation/drawer';
+import Personal from '../screen/Midwife/Personal';
+import {View, Text, Button, DrawerLayoutAndroid} from 'react-native';
+
 
 const AppNavigations = () => {
+ 
   const Stack = createStackNavigator();
   return (
-    <NavigationContainer>
+    
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
@@ -49,7 +53,7 @@ const AppNavigations = () => {
           }}
         />
       </Stack.Navigator>
-    </NavigationContainer>
+    
   );
 };
 

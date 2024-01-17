@@ -59,6 +59,7 @@ function ChangePasswordField() {
             borderRadius: 40,
             paddingHorizontal: 10,
             marginBottom: 30,
+            //maxWidth:80%
           }}>
           <TextInput placeholder="Confirm Password" secureTextEntry={true} />
         </View>
@@ -85,7 +86,7 @@ function ChangePasswordField() {
                 borderRadius: 40,
                 color: '#fff',
               }}>
-              Confirm 
+              Confirm
             </Text>
           </TouchableOpacity>
         </View>
