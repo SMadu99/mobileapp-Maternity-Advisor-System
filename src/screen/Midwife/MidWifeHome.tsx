@@ -53,20 +53,150 @@ const MidWifeHome = () => {
           <View style={{
         flex:1,flexDirection:'row'
       }}>
-        <View style={{flex:1,backgroundColor:'yellow'}}></View>
-        <View style={{flex:1,backgroundColor:'red'}}></View>
+        <View style={{flex:1,backgroundColor:'yellow',alignItems:'center'}}>
+          <View style={{
+            width:80,
+            height:80,
+            backgroundColor:'#fff',
+            marginTop:10,
+            alignItems:'center',
+            borderRadius:10          }}>
+              <Image style={{
+                 width: '80%',
+                 height: '80%',
+                 position: 'absolute',
+                 resizeMode: 'cover',
+                 marginTop:8
+                 
+        }}
+        source={require('../../assests/images/personal.png')}/>
+              <View style={{}}></View>
+            </View>
+            <Text style={{
+              fontWeight:'bold',
+              fontSize:18,
+              marginTop:10
+              
+            }}>Personal Information</Text>
+        </View>
+        <View style={{flex:1,backgroundColor:'red',alignItems:'center',}}>
+        <View style={{
+            width:80,
+            height:80,
+            backgroundColor:'#fff',
+            marginTop:10,
+            alignItems:'center',
+            borderRadius:10
+                     }}>
+              
+                <Image style={{
+                 width: '80%',
+                 height: '80%',
+                 position: 'absolute',
+                 resizeMode: 'cover',
+                 marginTop:8
+                 
+        }}
+        source={require('../../assests/images/register.png')}/>
+              
+            </View>
+            <Text style={{
+              fontWeight:'bold',
+              fontSize:18,
+              marginTop:10
+            }}>Register</Text>
+        </View>
       </View>
       <View style={{
         flex:1,flexDirection:'row'
       }}>
-        <View style={{flex:1,backgroundColor:'red'}}></View>
-        <View style={{flex:1,backgroundColor:'yellow'}}></View>
+        <View style={{flex:1,backgroundColor:'red',alignItems:'center'}}>
+        <View style={{
+            width:80,
+            height:80,
+            backgroundColor:'#fff',
+            marginTop:10,
+            alignItems:'center',
+            borderRadius:10
+                     }}>
+                      <Image style={{
+                 width: '80%',
+                 height: '80%',
+                 position: 'absolute',
+                 resizeMode: 'cover',
+                 marginTop:8
+                 
+        }}
+        source={require('../../assests/images/view.png')}/>
+                     </View>
+            <Text style={{
+              fontWeight:'bold',
+              fontSize:18,
+              marginTop:10
+            }}>View</Text>
+        </View>
+        <View style={{flex:1,backgroundColor:'yellow',alignItems:'center'}}>
+        <View style={{
+            width:80,
+            height:80,
+            backgroundColor:'#fff',
+            marginTop:10,
+            alignItems:'center',
+            borderRadius:10          }}><Image style={{
+              width: '80%',
+              height: '80%',
+              position: 'absolute',
+              resizeMode: 'cover',
+              marginTop:8
+              
+     }}
+     source={require('../../assests/images/clinic.png')}/></View>
+            <Text style={{
+              fontWeight:'bold',
+              fontSize:18,
+              marginTop:10
+            }}>Clinic Schedule</Text>
+        </View>
       </View>
       <View style={{
         flex:1,flexDirection:'row'
       }}>
-        <View style={{flex:1,backgroundColor:'yellow'}}></View>
-        <View style={{flex:1,backgroundColor:'red'}}></View>
+        <View style={{flex:1,backgroundColor:'yellow',alignItems:'center'}}>
+        <View style={{
+            width:80,
+            height:80,
+            backgroundColor:'#fff',
+            marginTop:10,
+            alignItems:'center',
+            borderRadius:10          }}><Image style={{
+              width: '80%',
+              height: '80%',
+              position: 'absolute',
+              resizeMode: 'cover',
+              marginTop:8
+              
+     }}
+     source={require('../../assests/images/summary.png')}/></View>
+            <Text>Shanilka</Text>
+        </View>
+        <View style={{flex:1,backgroundColor:'red',alignItems:'center'}}>
+        <View style={{
+            width:80,
+            height:80,
+            backgroundColor:'#fff',
+            marginTop:10,
+            alignItems:'center',
+            borderRadius:10          }}><Image style={{
+              width: '80%',
+              height: '80%',
+              position: 'absolute',
+              resizeMode: 'cover',
+              marginTop:8
+              
+     }}
+     source={require('../../assests/images/register.png')}/></View>
+            <Text>Shanilka </Text>
+        </View>
       </View>
 
         </View>
