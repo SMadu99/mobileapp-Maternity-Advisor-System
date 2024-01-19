@@ -10,7 +10,25 @@ import {
 } from 'react-native';
 import React from 'react';
 
-const MidWifeHome = () => {
+const MidWifeHome = (props:any) => {
+  const stack = props.navigation;
+
+  function goPersonal() {
+    stack.navigate('personal');
+  }
+  function goRegister() {
+    stack.navigate('regitser');
+  }
+  function goView() {
+    stack.navigate('viewdetails');
+  }
+  function goClinic() {
+    stack.navigate('clinicschedule');
+  }
+  function goSummary() {
+    stack.navigate('summary');
+  }
+
   return (
 
     
@@ -53,12 +71,14 @@ const MidWifeHome = () => {
           <View style={{
         flex:1,flexDirection:'row'
       }}>
-        <View style={{flex:1,backgroundColor:'yellow',alignItems:'center'}}>
+        <View style={{flex:1,}}>
+          <TouchableOpacity onPress={goPersonal}>
           <View style={{
             width:80,
             height:80,
             backgroundColor:'#fff',
             marginTop:10,
+            marginLeft:50,
             alignItems:'center',
             borderRadius:10          }}>
               <Image style={{
@@ -66,20 +86,23 @@ const MidWifeHome = () => {
                  height: '80%',
                  position: 'absolute',
                  resizeMode: 'cover',
-                 marginTop:8
+                 marginTop:8,
+                 
                  
         }}
         source={require('../../assests/images/personal.png')}/>
-              <View style={{}}></View>
+              
             </View>
             <Text style={{
               fontWeight:'bold',
               fontSize:18,
-              marginTop:10
+              marginTop:10,
+              marginLeft:10
               
-            }}>Personal Information</Text>
+            }}>Personal Information</Text></TouchableOpacity>
         </View>
-        <View style={{flex:1,backgroundColor:'red',alignItems:'center',}}>
+        <View style={{flex:1,alignItems:'center',}}>
+          <TouchableOpacity onPress={goRegister}>
         <View style={{
             width:80,
             height:80,
@@ -103,20 +126,23 @@ const MidWifeHome = () => {
             <Text style={{
               fontWeight:'bold',
               fontSize:18,
-              marginTop:10
-            }}>Register</Text>
+              marginTop:10,
+              marginLeft:5
+            }}>Register</Text></TouchableOpacity>
         </View>
       </View>
       <View style={{
         flex:1,flexDirection:'row'
       }}>
-        <View style={{flex:1,backgroundColor:'red',alignItems:'center'}}>
+        <View style={{flex:1,}}>
+        <TouchableOpacity onPress={goView}>
         <View style={{
             width:80,
             height:80,
             backgroundColor:'#fff',
             marginTop:10,
             alignItems:'center',
+            marginLeft:50,
             borderRadius:10
                      }}>
                       <Image style={{
@@ -124,7 +150,8 @@ const MidWifeHome = () => {
                  height: '80%',
                  position: 'absolute',
                  resizeMode: 'cover',
-                 marginTop:8
+                 marginTop:8,
+                 
                  
         }}
         source={require('../../assests/images/view.png')}/>
@@ -132,15 +159,18 @@ const MidWifeHome = () => {
             <Text style={{
               fontWeight:'bold',
               fontSize:18,
-              marginTop:10
-            }}>View</Text>
+              marginTop:10,
+              paddingLeft:70
+            }}>View</Text></TouchableOpacity>
         </View>
-        <View style={{flex:1,backgroundColor:'yellow',alignItems:'center'}}>
+        <View style={{flex:1,}}>
+          <TouchableOpacity onPress={goClinic}>
         <View style={{
             width:80,
             height:80,
             backgroundColor:'#fff',
             marginTop:10,
+            marginLeft:50,
             alignItems:'center',
             borderRadius:10          }}><Image style={{
               width: '80%',
@@ -154,19 +184,22 @@ const MidWifeHome = () => {
             <Text style={{
               fontWeight:'bold',
               fontSize:18,
-              marginTop:10
-            }}>Clinic Schedule</Text>
+              marginTop:10,
+              marginLeft:30,
+            }}>Clinic Schedule</Text></TouchableOpacity>
         </View>
       </View>
       <View style={{
         flex:1,flexDirection:'row'
       }}>
-        <View style={{flex:1,backgroundColor:'yellow',alignItems:'center'}}>
+        <View style={{flex:1,}}>
+          <TouchableOpacity onPress={goSummary}>
         <View style={{
             width:80,
             height:80,
             backgroundColor:'#fff',
             marginTop:10,
+            marginLeft:50,
             alignItems:'center',
             borderRadius:10          }}><Image style={{
               width: '80%',
@@ -177,14 +210,21 @@ const MidWifeHome = () => {
               
      }}
      source={require('../../assests/images/summary.png')}/></View>
-            <Text>Shanilka</Text>
+            <Text style={{
+              fontWeight:'bold',
+              fontSize:18,
+              marginTop:10,
+              marginLeft:50
+            }}>Summary</Text></TouchableOpacity>
         </View>
-        <View style={{flex:1,backgroundColor:'red',alignItems:'center'}}>
+        <View style={{flex:1,}}>
+          <TouchableOpacity>
         <View style={{
             width:80,
             height:80,
             backgroundColor:'#fff',
             marginTop:10,
+            marginLeft:50,
             alignItems:'center',
             borderRadius:10          }}><Image style={{
               width: '80%',
@@ -195,7 +235,12 @@ const MidWifeHome = () => {
               
      }}
      source={require('../../assests/images/register.png')}/></View>
-            <Text>Shanilka </Text>
+            <Text style={{
+              fontWeight:'bold',
+              fontSize:18,
+              marginTop:10,
+              marginLeft:50
+            }}>Shanilka</Text></TouchableOpacity>
         </View>
       </View>
 
