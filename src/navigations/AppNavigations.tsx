@@ -12,15 +12,26 @@ import MidWifeHome from '../screen/Midwife/MidWifeHome';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import Personal from '../screen/Midwife/Personal';
 import {View, Text, Button, DrawerLayoutAndroid} from 'react-native';
-import Summary from '../screen/Midwife/Summary';
-import CliniSchedule from '../screen/Midwife/CliniSchedule';
-import ViewDetails from '../screen/Midwife/ViewDetails';
 import Register from '../screen/Midwife/Register';
+import ViewDetails from '../screen/Midwife/ViewDetails';
+import Summary from '../screen/Midwife/Summary';
 
-
+const Stack = createStackNavigator();
+const Drawer = createDrawerNavigator();
+function DrawerRoutes() {
+  return (
+    <Drawer.Navigator>
+      <Drawer.Screen name="midwifehome" component={MidWifeHome} />
+        <Drawer.Screen name="personal" component={Personal} />
+        <Drawer.Screen name="register" component={Register} />
+        <Drawer.Screen name="viewdetails" component={ViewDetails} />
+        <Drawer.Screen name="summary" component={Summary} />
+    </Drawer.Navigator>
+  );
+}
 const AppNavigations = () => {
- 
-  const Stack = createStackNavigator();
+  
+  
   return (
     
       <Stack.Navigator
@@ -51,7 +62,7 @@ const AppNavigations = () => {
         />
         <Stack.Screen
           name="midwifehome"
-          component={MidWifeHome}
+          component={DrawerRoutes}
           options={{
             cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
           }}
