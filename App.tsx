@@ -1,15 +1,17 @@
 import 'react-native-gesture-handler';
 import AppNavigations from './src/navigations/AppNavigations';
 import {NavigationContainer} from '@react-navigation/native';
+import LoginPage from './src/screen/LoginPage';
 
 
 
 function App(): React.JSX.Element {
   return (
-    <NavigationContainer>
+  <NavigationContainer>
    <AppNavigations/>
    
   </NavigationContainer>
+  //<LoginPage/>
   );
 }
 
